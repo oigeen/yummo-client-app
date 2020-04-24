@@ -1,6 +1,7 @@
 import axios from "axios";
 
 var baseUrl = "https://yummo-spoonacular-relay-api.herokuapp.com/api"
+
 export default {
   getRecipes: async function(selectedIngredientNames) {
     if (
