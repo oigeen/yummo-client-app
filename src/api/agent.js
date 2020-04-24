@@ -41,9 +41,6 @@ export default {
       alert("Invalid recipe Id");
       return;
     }
-
-    var baseUrl = "http://localhost:3000/api/getRecipe";
-
     var queryString = baseUrl + "/getRecipe?recipeId=" + id;
     return await axios.get(queryString);
   }
