@@ -1,6 +1,6 @@
 import axios from "axios";
 
-var baseUrl = "process.env.VUE_APP_YUMMO_SPOONACULAR_RELAY_API_ROOT"
+var baseUrl = "https://yummo-spoonacular-relay-api.herokuapp.com/api"
 export default {
   getRecipes: async function(selectedIngredientNames) {
     if (
