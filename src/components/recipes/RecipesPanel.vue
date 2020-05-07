@@ -5,11 +5,13 @@
         <v-col cols="12" align="center">
           <Landing v-if="!firstSearchConducted"></Landing>
 
-          <v-progress-circular
-            v-else-if="isLoading"
-            indeterminate
-            color="primary"
-          ></v-progress-circular>
+          <template v-else-if="isLoading">
+            <v-progress-circular
+              indeterminate
+              color="primary"
+            ></v-progress-circular>
+            <p style="margin-top:7px;">Loading</p>
+          </template>
 
           <DailyLimitReached v-else-if="dailyLimitReached"> </DailyLimitReached>
 

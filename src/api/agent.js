@@ -13,15 +13,11 @@ export default {
     }
     this.recipes = [];
 
-    //var baseUrl = "https://api.edamam.com/search";
-        //var to = "50";
-
     var ingredients = "";   
-
     selectedIngredientNames.forEach((ingredient) => {
       ingredients += ingredient + ",";
-      //ingredients += ingredient + " ";
     });
+    ingredients = ingredients.substring(0, ingredients.length - 1)
 
     var queryString =
       baseUrl +

@@ -4,6 +4,7 @@
       class="pa-8"
       v-model="ingredient"
       :items="unselectedIngredients"
+      dense
       :disabled="isDisabled"
       :allow-overflow="true"
       item-text="name"

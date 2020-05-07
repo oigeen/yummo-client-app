@@ -1,7 +1,7 @@
 <template>
   <v-app>
     <Navbar @toggleDrawer="toggleDrawer"></Navbar>
-    <v-navigation-drawer  
+    <v-navigation-drawer
       width="400"
       v-model="drawer"
       clipped
@@ -21,7 +21,7 @@
 
 <script>
 import Dashboard from "./components/Dashboard";
-import Navbar from './components/Navbar';
+import Navbar from "./components/Navbar";
 import IngredientsPanel from "./components/ingredients/IngredientsPanel";
 import store from "./store";
 
@@ -37,14 +37,40 @@ export default {
     drawer: !null,
   }),
   methods: {
-    toggleDrawer: function() { this.drawer = !this.drawer }
-  }
+    toggleDrawer: function() {
+      this.drawer = !this.drawer;
+    },
+    isMobile: function() {
+      if (screen.width <= 760) {
+        return true;
+      } else {
+        return false;
+      }
+    },
+  },
+  computed: {
+    isLoading: function() {
+      return this.$store.state.recipes.isLoading;
+    },
+  },
+  watch: {
+    isLoading: function() {
+      if(this.isLoading && this.isMobile) {
+        this.drawer = null;
+      }
+    }
+  },
+  created() {
+    if (this.isMobile) {
+      this.drawer = null;
+    }
+  },
 };
 </script>
 
 <style>
 .v-card__text,
 .v-card__title {
-  word-break: normal; /* maybe !important  */
+  word-break: normal;
 }
 </style>

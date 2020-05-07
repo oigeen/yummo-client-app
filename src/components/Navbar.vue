@@ -18,11 +18,15 @@
           >Thank you for using Yummo!</v-card-title
         >
         <v-card-text
-          >If you need some inspiration for your next meal, you're in the right place. </v-card-text
+          >If you need some inspiration for your next meal, you're in the right place. Yummo can help
+          you search for delicious recipes based on the ingredients you already have. </v-card-text
         >
         <v-card-text>
-          Just list what ingredients you have in the panel on the left,
-           hit "Get Recipes" and Yummo will suggest recipes that you can prepare.
+          From the ingredients panel, simply list the ingredients you would like to use and hit 'Get Recipes'. Yummo
+          will do the rest.
+        </v-card-text>
+        <v-card-text>
+          Happy cooking!
         </v-card-text>
         <v-card-actions>
           <v-spacer></v-spacer>

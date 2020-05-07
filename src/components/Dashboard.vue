@@ -1,7 +1,5 @@
 <template>
-  <div>
     <RecipesPanel class="pa-3" />
-  </div>
 </template>
 
 <script>
