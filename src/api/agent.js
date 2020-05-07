@@ -1,7 +1,6 @@
 import axios from "axios";
 
 var baseUrl = process.env.VUE_APP_YUMMO_SPOONACULAR_RELAY_API_ROOT;
-console.log(process.env);
 
 export default {
   getRecipes: async function(selectedIngredientNames) {
