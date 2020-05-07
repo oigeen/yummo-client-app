@@ -9,7 +9,7 @@
 
     <template>
       <v-row>
-        <v-col cols="6">
+        <v-col xs="1" sm="6">
           <v-card>
             <v-img :src="recipe.image"></v-img>
             <v-card-title class="text-left">{{ recipe.title }}</v-card-title>
@@ -49,7 +49,7 @@
             </v-container>
           </v-card>
         </v-col>
-        <v-col cols="6">
+        <v-col xs ="1" sm="6">
           <v-tabs fixed-tabs v-model="tab">
             <v-tab>
               Ingredients
