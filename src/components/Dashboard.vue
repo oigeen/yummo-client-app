@@ -11,6 +11,6 @@ export default {
   store,
   components: {
     RecipesPanel,
-  }
+  },
 };
 </script>

@@ -13,9 +13,14 @@
     >
       <IngredientsPanel @onCloseDrawer="toggleDrawer"></IngredientsPanel>
     </v-navigation-drawer>
+
     <v-content>
       <Dashboard />
     </v-content>
+    <v-footer app inset color="secondary">
+      <v-spacer> </v-spacer>
+      &copy; Yummo - {{ new Date().getFullYear() }}
+    </v-footer>
   </v-app>
 </template>
 
@@ -55,10 +60,10 @@ export default {
   },
   watch: {
     isLoading: function() {
-      if(this.isLoading && this.isMobile) {
+      if (this.isLoading && this.isMobile) {
         this.drawer = null;
       }
-    }
+    },
   },
   created() {
     if (this.isMobile) {
