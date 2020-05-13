@@ -12,8 +12,8 @@
         <v-col xs="1" sm="6">
           <v-card>
             <v-img :src="recipe.image"></v-img>
-            <v-card-title class="text-left">{{ recipe.title }}</v-card-title>
-            <v-card-subtitle class="text-left">
+            <v-card-title class="text-left cardTitle">{{ recipe.title }}</v-card-title>
+            <v-card-subtitle class="text-left cardTitle">
               Recipe by
               <a :href="recipe.sourceUrl" target="_blank">{{
                 recipe.sourceName
@@ -99,9 +99,6 @@
         </v-col>
       </v-row>
     </template>
-    <!-- <template v-else>
-      <RecipeNotFound></RecipeNotFound>
-    </template> -->
   </v-container>
 </template>
 
@@ -132,4 +129,8 @@ export default {
 };
 </script>
 
-<style scoped></style>
+<style scoped>
+  .cardTitle {
+    font-family: 'Jost';
+  }
+</style>

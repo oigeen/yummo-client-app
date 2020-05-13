@@ -9,11 +9,11 @@
     >
       <v-card @click="fetchRecipeDetails" target="_blank" flat>
           <v-img :src="recipe.image" max-height="300"> </v-img>
-          <v-card-title>
-            <p class="align-left" color="green">{{ recipe.title }}</p>
-          </v-card-title>
+          <v-card-title class="cardTitle align-left">{{ recipe.title }}</v-card-title>
       </v-card>
     </v-lazy>
+      <v-divider></v-divider>
+
   </v-container>
 </template>
 
@@ -36,4 +36,11 @@ export default {
 };
 </script>
 
-<style scoped></style>
+<style scoped>
+  .cardTitle {
+    font-family: 'Jost';
+  }
+  .align-left {
+    text-align: left;
+  }
+</style>
