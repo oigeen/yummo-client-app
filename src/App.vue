@@ -17,10 +17,6 @@
     <v-content>
       <Dashboard />
     </v-content>
-    <v-footer app inset color="secondary">
-      <v-spacer> </v-spacer>
-      &copy; Yummo - {{ new Date().getFullYear() }}
-    </v-footer>
   </v-app>
 </template>
 
@@ -42,10 +38,10 @@ export default {
     drawer: !null,
   }),
   methods: {
-    toggleDrawer: function() {
+    toggleDrawer: function () {
       this.drawer = !this.drawer;
     },
-    isMobile: function() {
+    isMobile: function () {
       if (screen.width <= 760) {
         return true;
       } else {
@@ -54,12 +50,12 @@ export default {
     },
   },
   computed: {
-    isLoading: function() {
+    isLoading: function () {
       return this.$store.state.recipes.isLoading;
     },
   },
   watch: {
-    isLoading: function() {
+    isLoading: function () {
       if (this.isLoading && this.isMobile) {
         this.drawer = null;
       }
